@@ -1,0 +1,197 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<title>青果软件</title>
+		<meta name="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
+		<meta name="CODE_LANGUAGE" Content="C#">
+		<meta name="vs_defaultClientScript" content="JavaScript">
+		<LINK href="../_Style/styles_Qry.css" type="text/css" rel="stylesheet">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<script language=javascript>
+		    function openWin(theID)
+		    {    		
+			    var theURL,w,h,Tform;
+			    w=450,h=380;
+			    eval("Tform='width="+w+",height="+h+"'");
+				    theURL = '../JXZY/INFO_Teacher.aspx?id='+theID.getAttribute("value");
+			    pop=window.open(theURL,'winKPT',Tform);	
+		    }
+		    
+		    function selectRadio(obj)
+		    {
+				var flag = "true",skbz="";
+				var divCol = document.getElementsByTagName("input");
+				var hidSKFS = document.getElementById("hid_skfs").value;
+				try
+				{
+					skbz=obj.getAttribute("skbz");//obj.value.split('B')[1];
+				}
+				catch(e){}
+				
+				if( hidSKFS != "")
+				{
+					var arr = hidSKFS.split("@");
+					
+					for (var i = 0; i < divCol.length; i++){
+					    if(divCol[i].type == "radio"){
+						  if(skbz!="" && divCol[i].getAttribute("skbz")==skbz)
+						  {
+						      divCol[i].checked=true;
+						  }
+						  else if(divCol[i].value.split('@')[1] == obj.value.split('@')[1] || divCol[i].getAttribute("skbz")!="") 
+						  { 
+						      divCol[i].checked=false;
+						  }
+						 
+						}
+					}
+					obj.checked=true;
+					/*
+					for(var j=0;j<arr.length;j++)
+					{
+					    //try{eval("window.document.all.rad_"+arr[j]+skbz+".checked=false;");}catch(e){}
+					    if(skbz!="")
+						{
+						    try{eval("window.document.all.rad_"+arr[j]+skbz+".checked=true;");}catch(e){}
+						}
+						obj.checked=true;
+					}
+					*/
+					for(var j = 0; j < arr.length; j++)
+					{
+						var tflag = "false";
+						for (var i = 0; i < divCol.length; i++){
+							if( divCol[i].type == "radio" && divCol[i].checked )
+							{
+								var tstr = divCol[i].value;
+								var skfs = tstr.split('@')[1];
+								
+								if( arr[j] == skfs )
+								{
+									tflag = "true";
+									break;
+								}
+							}
+						}
+						
+						if( tflag == "false")
+						{
+							flag = "false";
+							break;
+						}
+					}
+				}
+				
+				if( flag == "true" )
+				{
+					document.getElementById("sure").disabled = false;
+				}else{
+					document.getElementById("sure").disabled = true;
+				}
+		    } 
+			
+			
+			function ChkValue()
+			{
+				var flag = "true";
+				var retstr = "";
+				var jsskbj_str = "";
+				var jsskbj_val = "";
+				
+				var divCol = document.getElementsByTagName("input");
+				var hidSKFS = document.getElementById("hid_skfs").value;
+				if( hidSKFS != "")
+				{
+					var arr = hidSKFS.split("@");
+					for(j = 0; j < arr.length; j++)
+					{
+						var tflag = "false";
+						for (i = 0; i < divCol.length; i++){
+							if( divCol[i].type == "radio" && divCol[i].checked )
+							{
+								var tstr = divCol[i].value;
+								tstr=tstr.replace("@"+skfs,"");
+								var skfs = tstr.split('@')[1];
+								
+								if( arr[j] == skfs )
+								{
+									tflag = "true";
+									
+									if( jsskbj_str == "" )
+										jsskbj_str = tstr.split('@')[0];
+									else
+										jsskbj_str = jsskbj_str + ";" + tstr.split('@')[0];
+										
+									if( jsskbj_val == "" )
+										jsskbj_val = tstr.split('@')[2];
+									else
+										jsskbj_val = jsskbj_val + ";" + tstr.split('@')[2];
+										
+									break;
+								}
+							}
+						}
+						
+						if( tflag == "false")
+						{
+							flag = "false";
+							break;
+						}
+					}
+					
+					if( flag == "true"){
+						try{
+							retstr = jsskbj_str+ "@" +jsskbj_val;
+							//window.returnValue = retstr;
+							myReturnValue(retstr);
+							setTimeout(this.close(),1000);
+						}catch(e){}
+					}else{
+						alert("请选择授课方式/上课班级！");
+						return;
+					}
+				}
+			
+			}
+			function myReturnValue(str) {
+				if (navigator.userAgent.indexOf("Chrome") > 0) {
+				    window.opener.returnCallBackValue354865588.call(window.opener, str);
+				}
+				else {
+				   window.returnValue = str;
+				}
+			}
+		</script>
+		<style>
+			TD{font-family: "宋体"; font-size: 12px;border-color_:#008080;
+				border-left:medium none; border-right_: 1px solid; 
+				border-top:medium none; border-bottom_:1px solid; 
+				padding-left:3px;padding-right:3px;word-wrap: break-word; word-break: break-all; 
+			}
+		</style>
+	</HEAD>
+	<body onselectstart=window.event.returnValue=false oncontextmenu=window.event.returnValue=false ondragstart=window.event.returnValue=false onsource=window.event.returnValue=false 
+	 leftMargin="0" topMargin="0" marginheight="0" marginwidth="0">
+	<form name="FormAdd" method=post >
+		<table width="99%" border="0" cellspacing="0" cellpadding="0" height="100%" align="center">
+			<tr style="height:28">
+				<td width="80%" >注：每种授课方式分别可以选择一个上课班级，且每种授课方式必须选择一个上课班级才能提交。</td>
+				<td width="20%" align="right" style="height:28">
+					<input class="button" type="hidden" name="submit" id=sure value="确定" onclick="ChkValue()" disabled>					
+					<input class="button" type="button" name="submit" value="关闭" onclick="window.close()"></td>
+			</tr>
+			<tr>
+				<td colspan="2" >
+					<div style="OVERFLOW:auto;WIDTH:100%;HEIGHT:100%">
+						<table id="pageRpt" cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td>
+	理论<br><TABLE WIDTH=100% BORDER=1 align=center valign=top CELLPADDING=0 CELLSPACING=0 bordercolorlight=#89bfa7 bordercolordark=#FFFFFF><tr class=T><td align=center width='15%' rowspan=2 >上课班组</td><td align=center width='8%' rowspan=2 >任课教师</td><td align=center width='5%' rowspan=2 >上课<br>班号</td><td align=center width='12%' rowspan=2 >上课班级名称<br></td><td align=center width='15%' colspan=3 rowspan=1  >人数</td><td align=center width='23%' rowspan=2 >上课时间</td><td align=center width='12%' rowspan=2 >上课地点</td><td align=center width='5%' rowspan=2 >上课<br>校区</td><td align=center width='5%'  rowspan=2 >选定</td></tr><tr class=T><td align=center width='5%' >限选</td><td align=center width='5%' >已选</td><td align=center width='5%' >可选</td></tr><tr class=B ><td rowspan = '2' ><br></td><td rowspan = '2' ><a href='#' id=showD onclick=openWin(this)  value='2jtbn52gt29c1memiv00004i&param2=073a5c81ea978e4c9d5fc6e8b8ef584c'>李曼曼</a><br></td><td rowspan = '2' align=center >001<br></td><td rowspan = '2' >翻转课堂教学<br></td><td rowspan = '2' align=right >60<br></td><td rowspan = '2' align=right >60<br></td><td rowspan = '2' align=right >0<br></td><td style='height:20' >1-16周&nbsp;一(5-6节)<br></td><td >D1214<br></td><td >D区<br></td><td rowspan = '2' align=center ><input type=radio name='rad_0' skbz='' id='rad_0' align=center value='[001]李曼曼@0@E0T0002455K108214-001B' onclick=selectRadio(this)  disabled  /></td></tr><tr class=B ><td style='height:20' >1-8周&nbsp;三(5-6节)<br></td><td >D1210<br></td><td >D区<br></td></tr><tr class=B ><td rowspan = '2' ><br></td><td rowspan = '2' ><a href='#' id=showD onclick=openWin(this)  value='2jtbn52gt29c1o6wkd00004k&param2=3229dca60db5840a96bd0c12b6b424f5'>胥斌</a><br></td><td rowspan = '2' align=center >002<br></td><td rowspan = '2' >翻转课堂教学<br></td><td rowspan = '2' align=right >60<br></td><td rowspan = '2' align=right >60<br></td><td rowspan = '2' align=right >0<br></td><td style='height:20' >1-16周&nbsp;一(5-6节)<br></td><td >DZ306<br></td><td >D区<br></td><td rowspan = '2' align=center ><input type=radio name='rad_0' skbz='' id='rad_2' align=center value='[002]胥斌@0@E0T0005337K108214-002B' onclick=selectRadio(this)  disabled  /></td></tr><tr class=B ><td style='height:20' >1-8周&nbsp;三(5-6节)<br></td><td >D1211<br></td><td >D区<br></td></tr><tr class=B ><td rowspan = '2' ><br></td><td rowspan = '2' ><a href='#' id=showD onclick=openWin(this)  value='2jtbn52gt29c1o6wkd00004f&param2=3aed61964646ae9a506846599920a0e0'>曹术存</a><br></td><td rowspan = '2' align=center >003<br></td><td rowspan = '2' ><br></td><td rowspan = '2' align=right >120<br></td><td rowspan = '2' align=right >120<br></td><td rowspan = '2' align=right >0<br></td><td style='height:20' >1-16周&nbsp;一(5-6节)<br></td><td >D1235<br></td><td >D区<br></td><td rowspan = '2' align=center ><input type=radio name='rad_0' skbz='' id='rad_4' align=center value='[003]曹术存@0@E0T0005332K108214-003B' onclick=selectRadio(this)  disabled  /></td></tr><tr class=B ><td style='height:20' >1-8周&nbsp;三(5-6节)<br></td><td >D1235<br></td><td >D区<br></td></tr><tr class=B ><td rowspan = '2' ><br></td><td rowspan = '2' ><a href='#' id=showD onclick=openWin(this)  value='2jtbn52gt29c1nlja000004l&param2=d6b2cb7fe822cc697d0668637de3ec2e'>颜军</a><br></td><td rowspan = '2' align=center >004<br></td><td rowspan = '2' ><br></td><td rowspan = '2' align=right >120<br></td><td rowspan = '2' align=right >120<br></td><td rowspan = '2' align=right >0<br></td><td style='height:20' >1-16周&nbsp;一(5-6节)<br></td><td >D1136<br></td><td >D区<br></td><td rowspan = '2' align=center ><input type=radio name='rad_0' skbz='' id='rad_6' align=center value='[004]颜军@0@E0T0004668K108214-004B' onclick=selectRadio(this)  disabled  /></td></tr><tr class=B ><td style='height:20' >1-8周&nbsp;三(5-6节)<br></td><td >D1236<br></td><td >D区<br></td></tr><tr class=B ><td rowspan = '2' ><br></td><td rowspan = '2' ><a href='#' id=showD onclick=openWin(this)  value='2jtbn52gt29c1meplw00004l&param2=d4128b6ca2bb68e62b66bd31d30424d0'>方延洪</a><br></td><td rowspan = '2' align=center >005<br></td><td rowspan = '2' ><br></td><td rowspan = '2' align=right >120<br></td><td rowspan = '2' align=right >120<br></td><td rowspan = '2' align=right >0<br></td><td style='height:20' >1-16周&nbsp;一(5-6节)<br></td><td >D1236<br></td><td >D区<br></td><td rowspan = '2' align=center ><input type=radio name='rad_0' skbz='' id='rad_8' align=center value='[005]方延洪@0@E0T0002828K108214-005B' onclick=selectRadio(this)  disabled  /></td></tr><tr class=B ><td style='height:20' >1-8周&nbsp;三(5-6节)<br></td><td >D1136<br></td><td >D区<br></td></tr><tr class=B ><td rowspan = '2' ><br></td><td rowspan = '2' ><a href='#' id=showD onclick=openWin(this)  value='2jtbn52gt29c1nlja100004e&param2=77745fbfeb96d43a7591c2878942ca7c'>钟波</a><br></td><td rowspan = '2' align=center >006<br></td><td rowspan = '2' ><br></td><td rowspan = '2' align=right >120<br></td><td rowspan = '2' align=right >120<br></td><td rowspan = '2' align=right >0<br></td><td style='height:20' >1-16周&nbsp;一(5-6节)<br></td><td >D1335<br></td><td >D区<br></td><td rowspan = '2' align=center ><input type=radio name='rad_0' skbz='' id='rad_10' align=center value='[006]钟波@0@E0T0004671K108214-006B' onclick=selectRadio(this)  disabled  /></td></tr><tr class=B ><td style='height:20' >1-8周&nbsp;三(5-6节)<br></td><td >D1335<br></td><td >D区<br></td></tr><tr class=B ><td rowspan = '2' ><br></td><td rowspan = '2' ><a href='#' id=showD onclick=openWin(this)  value='2jtbn52gt29c1osamr00004l&param2=9fc2adca2ed03a5ad1d813522d85c444'>王汉明</a><br></td><td rowspan = '2' align=center >008<br></td><td rowspan = '2' ><br></td><td rowspan = '2' align=right >120<br></td><td rowspan = '2' align=right >120<br></td><td rowspan = '2' align=right >0<br></td><td style='height:20' >1-16周&nbsp;一(5-6节)<br></td><td >D1139<br></td><td >D区<br></td><td rowspan = '2' align=center ><input type=radio name='rad_0' skbz='' id='rad_12' align=center value='[008]王汉明@0@E0T0006198K108214-008B' onclick=selectRadio(this)  disabled  /></td></tr><tr class=B ><td style='height:20' >1-8周&nbsp;三(5-6节)<br></td><td >D1139<br></td><td >D区<br></td></tr><tr class=B ><td rowspan = '2' ><br></td><td rowspan = '2' ><a href='#' id=showD onclick=openWin(this)  value='2jtbn52gt29c1o6wkd00004i&param2=a56fe1f0a65bc9217a1d749dc4b95605'>伍俊良</a><br></td><td rowspan = '2' align=center >010<br></td><td rowspan = '2' ><br></td><td rowspan = '2' align=right >120<br></td><td rowspan = '2' align=right >120<br></td><td rowspan = '2' align=right >0<br></td><td style='height:20' >1-16周&nbsp;一(5-6节)<br></td><td >D1238<br></td><td >D区<br></td><td rowspan = '2' align=center ><input type=radio name='rad_0' skbz='' id='rad_14' align=center value='[010]伍俊良@0@E0T0005335K108214-010B' onclick=selectRadio(this)  disabled  /></td></tr><tr class=B ><td style='height:20' >1-8周&nbsp;三(5-6节)<br></td><td >D1238<br></td><td >D区<br></td></tr><tr class=B ><td rowspan = '2' ><br></td><td rowspan = '2' ><a href='#' id=showD onclick=openWin(this)  value='2jtbn52gt29c1nlja000004m&param2=3945171f2558f7085c8aafdd3a0c7b6c'>阴文革</a><br></td><td rowspan = '2' align=center >011<br></td><td rowspan = '2' ><br></td><td rowspan = '2' align=right >120<br></td><td rowspan = '2' align=right >120<br></td><td rowspan = '2' align=right >0<br></td><td style='height:20' >1-16周&nbsp;一(5-6节)<br></td><td >D1239<br></td><td >D区<br></td><td rowspan = '2' align=center ><input type=radio name='rad_0' skbz='' id='rad_16' align=center value='[011]阴文革@0@E0T0004669K108214-011B' onclick=selectRadio(this)  disabled  /></td></tr><tr class=B ><td style='height:20' >1-8周&nbsp;三(5-6节)<br></td><td >D1239<br></td><td >D区<br></td></tr><tr class=B ><td rowspan = '2' ><br></td><td rowspan = '2' ><a href='#' id=showD onclick=openWin(this)  value='2jtbn52gt29c1lt7oy00004d&param2=a08e235d1df49bb67c3c19823088fa7a'>浦奎源</a><br></td><td rowspan = '2' align=center >012<br></td><td rowspan = '2' ><br></td><td rowspan = '2' align=right >120<br></td><td rowspan = '2' align=right >120<br></td><td rowspan = '2' align=right >0<br></td><td style='height:20' >1-16周&nbsp;一(5-6节)<br></td><td >D1338<br></td><td >D区<br></td><td rowspan = '2' align=center ><input type=radio name='rad_0' skbz='' id='rad_18' align=center value='[012]浦奎源@0@E0T0001580K108214-012B' onclick=selectRadio(this)  disabled  /></td></tr><tr class=B ><td style='height:20' >1-8周&nbsp;三(5-6节)<br></td><td >D1134<br></td><td >D区<br></td></tr><tr class=B ><td rowspan = '2' ><br></td><td rowspan = '2' ><a href='#' id=showD onclick=openWin(this)  value='2jtbn52gt29c1meplw00004k&param2=17545752416a52ccce784c097a47824f'>杨木洪</a><br></td><td rowspan = '2' align=center >013<br></td><td rowspan = '2' ><br></td><td rowspan = '2' align=right >120<br></td><td rowspan = '2' align=right >120<br></td><td rowspan = '2' align=right >0<br></td><td style='height:20' >1-16周&nbsp;一(5-6节)<br></td><td >D1339<br></td><td >D区<br></td><td rowspan = '2' align=center ><input type=radio name='rad_0' skbz='' id='rad_20' align=center value='[013]杨木洪@0@E0T0002827K108214-013B' onclick=selectRadio(this)  disabled  /></td></tr><tr class=B ><td style='height:20' >1-8周&nbsp;三(5-6节)<br></td><td >D1339<br></td><td >D区<br></td></tr><tr class=B ><td rowspan = '2' ><br></td><td rowspan = '2' ><a href='#' id=showD onclick=openWin(this)  value='2jtbn52gt29c1o6wkb00004i&param2=52e9669b92bc7f5a595419346377332e'>叶仲泉</a><br></td><td rowspan = '2' align=center >014<br></td><td rowspan = '2' ><br></td><td rowspan = '2' align=right >120<br></td><td rowspan = '2' align=right >121<br></td><td rowspan = '2' align=right >-1<br></td><td style='height:20' >1-16周&nbsp;一(5-6节)<br></td><td >DYC101<br></td><td >D区<br></td><td rowspan = '2' align=center ><input type=radio name='rad_0' skbz='' id='rad_22' align=center value='[014]叶仲泉@0@E0T0005315K108214-014B' onclick=selectRadio(this)  disabled  /></td></tr><tr class=B ><td style='height:20' >1-8周&nbsp;三(5-6节)<br></td><td >DYC101<br></td><td >D区<br></td></tr><tr class=B ><td rowspan = '2' ><br></td><td rowspan = '2' ><a href='#' id=showD onclick=openWin(this)  value='2jtbn52gt29c1nlja100004g&param2=21c7233d630e06e24214797114da8c3d'>彭智军</a><br></td><td rowspan = '2' align=center >015<br></td><td rowspan = '2' ><br></td><td rowspan = '2' align=right >120<br></td><td rowspan = '2' align=right >120<br></td><td rowspan = '2' align=right >0<br></td><td style='height:20' >1-16周&nbsp;一(5-6节)<br></td><td >DYC103<br></td><td >D区<br></td><td rowspan = '2' align=center ><input type=radio name='rad_0' skbz='' id='rad_24' align=center value='[015]彭智军@0@E0T0004673K108214-015B' onclick=selectRadio(this)  disabled  /></td></tr><tr class=B ><td style='height:20' >1-8周&nbsp;三(5-6节)<br></td><td >DYC103<br></td><td >D区<br></td></tr><tr class=B ><td rowspan = '2' ><br></td><td rowspan = '2' ><a href='#' id=showD onclick=openWin(this)  value='2jtbn52gt29c1os9uv00004f&param2=d75db526d7cb61fd69f3da0a8395d218'>刘朝林</a><br></td><td rowspan = '2' align=center >016<br></td><td rowspan = '2' ><br></td><td rowspan = '2' align=right >120<br></td><td rowspan = '2' align=right >120<br></td><td rowspan = '2' align=right >0<br></td><td style='height:20' >1-16周&nbsp;一(5-6节)<br></td><td >DYC104<br></td><td >D区<br></td><td rowspan = '2' align=center ><input type=radio name='rad_0' skbz='' id='rad_26' align=center value='[016]刘朝林@0@E0T0006052K108214-016B' onclick=selectRadio(this)  disabled  /></td></tr><tr class=B ><td style='height:20' >1-8周&nbsp;三(5-6节)<br></td><td >DYC104<br></td><td >D区<br></td></tr><tr class=B ><td rowspan = '2' ><br></td><td rowspan = '2' ><a href='#' id=showD onclick=openWin(this)  value='2jtbn52gt29c1nlktf00004l&param2=1c171d3c62291709df749390fdf44256'>徐建文</a><br></td><td rowspan = '2' align=center >018<br></td><td rowspan = '2' ><br></td><td rowspan = '2' align=right >120<br></td><td rowspan = '2' align=right >71<br></td><td rowspan = '2' align=right >49<br></td><td style='height:20' >1-16周&nbsp;一(5-6节)<br></td><td >D1445<br></td><td >D区<br></td><td rowspan = '2' align=center ><input type=radio name='rad_0' skbz='' id='rad_28' align=center value='[018]徐建文@0@E0T0004818K108214-018B' onclick=selectRadio(this)  disabled  /></td></tr><tr class=B ><td style='height:20' >1-8周&nbsp;三(5-6节)<br></td><td >D1203<br></td><td >D区<br></td></tr><input type=hidden name='hid_skfs' id='hid_skfs' value='0'></table><script language=javascript>parent.document.all.submit.disabled=false;</script>
+</td></tr></table>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</form>
+	</body>
+</HTML>

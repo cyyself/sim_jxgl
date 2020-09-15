@@ -1,0 +1,242 @@
+body 
+{  
+	font-size: 12px; 
+	font-family: "宋体"; 
+	background-color:#f4fffb;
+	COLOR:black;
+	SCROLLBAR-FACE-COLOR: #f4fffb; 
+	SCROLLBAR-HIGHLIGHT-COLOR: #f4fffb;
+	SCROLLBAR-SHADOW-COLOR: #f4fffb; 
+	SCROLLBAR-DLIGHT-COLOR: #318262;
+	SCROLLBAR-ARROW-COLOR: #318262; 
+	SCROLLBAR-TRACK-COLOR: #f4fffb;
+	SCROLLBAR-DARKSHADOW-COLOR: #318262;
+}
+
+a 
+{
+	font-size: 12px; 
+	text-decoration: none; 
+	font-family: 宋体; 
+	color: #660099
+}
+
+A:link 
+{
+	COLOR: #003399; 
+	FONT-SIZE: 12px
+}
+
+A:visited 
+{
+	COLOR: #003399; 
+	FONT-SIZE: 12px
+}
+
+A:active 
+{
+	COLOR: #990099; 
+	FONT-SIZE: 12px
+}
+
+a:hover 
+{
+	font-size: 12px;
+	color: #5082E6;
+	font-family: 宋体;
+	text-decoration: none
+}
+
+hr 
+{  
+	color: #008888
+}
+
+h3 
+{  
+	color: #008888;
+	margin-top: 2px; 
+	margin-right: 2px; 
+	margin-bottom: 2px; 
+	margin-left: 2px; 
+	padding-top: 0px; 
+	padding-right: 0px; 
+	padding-bottom: 0px; 
+	padding-left: 0px; 
+	text-align: center
+}
+
+TR.T 
+{	
+	BACKGROUND-COLOR: #bfe5d5
+}
+TR.H 
+{	
+	BACKGROUND-COLOR: #f4fef9;
+	height:20px;
+}
+TR.B 
+{	
+	BACKGROUND-COLOR: #ffffff;
+	height:20px;
+}
+white 
+{  
+	font-family: "宋体"; 
+	font-size: 12px; 
+	color: #CC3300
+}
+
+TD
+{
+	font-family: "宋体"; 
+	font-size: 12px;
+}
+
+TD.border
+{
+	font-family: "宋体"; 
+	font-size: 12px;
+	border-color:#008888;
+	border-left:0px solid; 
+	border-right: 1px solid; 
+	border-top :0px solid; 
+	border-bottom:1px solid
+}
+
+TD.noborder
+{
+	border-left:  medium none; 
+	border-top:medium none;
+	border-right: medium none;
+	border-bottom:medium none
+}
+
+TD.no-top
+{
+	border-left:1px solid
+}
+
+TD.only-bottom
+{
+	border-right: medium none
+}
+
+TD.TT
+{  
+	font-family: "宋体"; 
+	font-size: 12px; 
+	color: #003399;
+	text-decoration: underline
+}
+
+input.button 
+{
+	font-family: "宋体";
+	font-size: 12px;
+	background-image: url(../images/button/bgbtn2_0.gif);
+	border: none;
+	height: 20px;
+	width: 40px;
+	cursor: pointer
+}
+
+input.but3
+{
+	font-family: "宋体";
+	font-size: 12px;
+	border: none;
+	cursor: pointer;	
+	background-image: url(../images/button/bgbtn3_0.gif);
+	height: 20px;
+	width: 62px
+}
+
+input.but20 
+{
+	font-family: "宋体";
+	font-size: 12px;
+	border: none;
+	cursor: pointer;	
+	background-image: url(../images/button/bgbtn2_0.gif);
+	height: 20px;
+	width: 40px
+}
+
+.but21 
+{
+	font-family: "宋体";
+	font-size: 12px;
+	border: none;
+	cursor: pointer;	
+	background-image: url(../images/button/bgbtn2_1.gif);
+	height: 20px;
+	width: 40px
+}
+
+
+input.but20down 
+{
+	font-family: "宋体";
+	font-size: 12px;
+	border: none;
+	cursor: pointer;	
+	background-image: url(../images/button/bgbtn_down.gif);
+	height: 20px;
+	width: 42px
+}
+
+input.but20up 
+{
+	font-family: "宋体";
+	font-size: 12px;
+	border: none;
+	cursor: pointer;	
+	background-image: url(../images/button/bgbtn_up.gif);
+	height: 20px;
+	width: 42px
+}
+
+
+input.but40 
+{
+	font-family: "宋体";
+	font-size: 12px;
+	border: none;
+	cursor: pointer;	
+	background-image: url(../images/button/bgbtn4_0.gif);
+	height: 20px;
+	width: 62px
+}
+
+.but41 
+{
+	font-family: "宋体";
+	font-size: 12px;
+	border: none;
+	cursor: pointer;	
+	background-image: url(../images/button/bgbtn4_1.gif);
+	height: 20px;
+	width: 62px
+}
+
+
+Span 
+{
+	COLOR: #2A7CB1; 
+	FONT-SIZE: 12px; 
+	TEXT-DECORATION: none
+}
+
+.a 
+{
+	TEXT-DECORATION: underline
+}
+
+.input      {border:1px solid #B3B5B4;text-align:left;padding:1px;}
+.radio		{border:none;margin-bottom:-2px !important; margin:2px 0px -2px 0px;}
+.checkbox	{border:none;margin:0px !important; margin:2px 0px -2px 0px;}
+
+ 
+.but20left {border:0px;height:31px;width:30px;background-image:url(../images/button/left.gif);}
+.but20right {border:0px;height:31px;width:30px;background-image:url(../images/button/right.gif);}

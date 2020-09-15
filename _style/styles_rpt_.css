@@ -1,0 +1,48 @@
+body 
+{  
+	font-size:12px; font-family:"宋体"; background-color:#F2FBFF; color: #000000;
+	SCROLLBAR-FACE-COLOR: #f4fffb; 
+	SCROLLBAR-HIGHLIGHT-COLOR: #f4fffb;
+	SCROLLBAR-SHADOW-COLOR: #f4fffb; 
+	SCROLLBAR-3DLIGHT-COLOR: #A8DEFA;
+	SCROLLBAR-ARROW-COLOR: #A8DEFA; 
+	SCROLLBAR-TRACK-COLOR: #f4fffb;
+	SCROLLBAR-DARKSHADOW-COLOR: #A8DEFA;
+}
+
+
+TABLE      {FONT-FAMILY:"宋体";FONT-SIZE:12px;COLOR:#000000}
+
+
+A:link {
+	COLOR:#2A7CB1;
+	FONT-FAMILY:"宋体";
+	TEXT-DECORATION:none;
+	font-size: 12px;
+}
+
+A:visited    {COLOR:#2A7CB1;FONT-FAMILY:宋体;TEXT-DECORATION:none; }
+A:active     {FONT-FAMILY:宋体;TEXT-DECORATION:none; }
+A:hover      {COLOR:#DE9B45;TEXT-DECORATION:none; border-left-width:1; border-right-width:1; border-top-width:1}
+
+
+
+TR.T 
+{	
+	BACKGROUND-COLOR: #D4F1FF;
+}
+
+TD
+{
+	font-family: "宋体"; 
+	font-size: 12px;
+	height:20;
+	border-left:medium none; 
+	border-top:medium none; 
+	padding-left:3px;
+	padding-right:3px;
+	word-wrap: break-word; 
+	word-break: break-all; 
+}
+
+

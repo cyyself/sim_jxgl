@@ -1,0 +1,13 @@
+body {  font-size: 12px; font-family: "宋体"; COLOR:#37527F;}
+
+td {
+	font-family: "宋体";
+	font-size: 12px;
+	text-decoration: none;
+	line-height: 20px;
+
+}
+A:link       {COLOR:#2A7CB1;FONT-FAMILY:宋体;TEXT-DECORATION:none; }
+A:visited    {COLOR:#2A7CB1;FONT-FAMILY:宋体;TEXT-DECORATION:none; }
+A:active     {FONT-FAMILY:宋体;TEXT-DECORATION:none;   }
+A:hover      {COLOR:#DE9B45;TEXT-DECORATION:none; border-left-width:1; border-right-width:1; border-top-width:1}

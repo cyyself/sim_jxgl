@@ -1,0 +1,99 @@
+<?php
+    /*
+    对于每个老师，
+    0. tot表示这个老师可以选的数量
+    1. speed参数表示这个老师被选的速度，每多少秒一个
+    2. up
+    */
+    $course = array(
+        "[CST11102]新生研讨课"=>array(
+            array(
+                "name"=>"老师1",
+                "tot"=>60,
+                "speed"=>1,
+                "uplimit"=>24
+            )
+        ),
+        "[MATH10012]高等数学1（电子信息类）"=>array(
+            array(
+                "name"=>"老师1",
+                "tot"=>60,
+                "speed"=>0.5
+            ),
+            array(
+                "name"=>"老师2",
+                "tot"=>60,
+                "speed"=>0.4
+            ),
+            array(
+                "name"=>"老师3",
+                "tot"=>60,
+                "speed"=>0.3
+            ),
+            array(
+                "name"=>"老师4",
+                "tot"=>60,
+                "speed"=>0.2
+            ),
+            array(
+                "name"=>"老师5",
+                "tot"=>60,
+                "speed"=>0.1,
+                "uplimit"=>31
+            )
+        ),
+        "[MATH10032]线性代数(II)"=>array(
+            array(
+                "name"=>"老师1",
+                "tot"=>60,
+                "speed"=>0.55
+            ),
+            array(
+                "name"=>"老师2",
+                "tot"=>60,
+                "speed"=>0.44
+            ),
+            array(
+                "name"=>"老师3",
+                "tot"=>60,
+                "speed"=>0.33
+            ),
+            array(
+                "name"=>"老师4",
+                "tot"=>60,
+                "speed"=>0.22
+            ),
+            array(
+                "name"=>"老师5",
+                "tot"=>60,
+                "speed"=>0.11,
+                "uplimit"=>49
+            )
+        ),
+        "[MET11000]军事理论"=>array(
+            array(
+                "name"=>"老师1",
+                "tot"=>150,
+                "speed"=>1,
+                "uplimit"=>132
+            )
+        ),
+        "[MT10200]中国近现代史纲要"=>array(
+            array(
+                "name"=>"老师1",
+                "tot"=>150,
+                "speed"=>1,
+                "uplimit"=>135
+            )
+        ),
+        "[MT80001]形势与政策1"=>array(
+
+        ),
+        "[CST11104]计算机导论"=>array(
+
+        ),
+        "[FCP0000]程序设计基础（1）"=>array(
+
+        )
+    );
+?>

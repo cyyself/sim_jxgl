@@ -1,0 +1,222 @@
+body 
+{  
+	font-size: 12px; 
+	font-family: "宋体"; 
+	background-color:#f4fffb;
+	COLOR:black;
+	SCROLLBAR-FACE-COLOR: #f4fffb; 
+	SCROLLBAR-HIGHLIGHT-COLOR: #f4fffb;
+	SCROLLBAR-SHADOW-COLOR: #f4fffb; 
+	SCROLLBAR-DLIGHT-COLOR: #318262;
+	SCROLLBAR-ARROW-COLOR: #318262; 
+	SCROLLBAR-TRACK-COLOR: #f4fffb;
+	SCROLLBAR-DARKSHADOW-COLOR: #318262;
+}
+
+TR.H 
+{	
+	BACKGROUND-COLOR: #f4fef9
+}
+white 
+{  
+	font-family: "宋体"; 
+	font-size: 12px; 
+	color: #FFFFCC
+}
+
+TR.B 
+{	
+	BACKGROUND-COLOR: #ffffff
+}
+white 
+{  
+	font-family: "宋体"; 
+	font-size: 12px; 
+	color: #FFFFCC
+}
+
+TR.T 
+{	
+	BACKGROUND-COLOR: #bfe5d5;
+}
+white 
+{  
+	font-family: "宋体"; 
+	font-size: 12px; 
+	color: #163A54
+}
+
+TD
+{
+	font-family: "宋体"; 
+	font-size: 12px;
+	height:20;
+	border-left:medium none; 
+	border-top:medium none; 
+	padding-left:3px;
+	padding-right:3px;
+	word-wrap: break-word; 
+	word-break: break-all; 
+}
+
+TD.noborder
+{
+	border-left:  medium none; 
+	border-top:medium none;
+	border-right: medium none; 
+	border-bottom:medium none;
+	padding-left:0px;
+	padding-right:0px;
+}
+
+TD.no-top
+{
+	border-left:1px solid
+}
+
+TD.only-bottom
+{
+	border-right: medium none;
+}
+
+TD.AT
+{  
+	font-family: "宋体"; 
+	font-size: 12px; color: #2A7CB1;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+TD.AG
+{  
+	font-family: "宋体"; 
+	font-size: 12px; 
+	color: green;
+	text-decoration: none
+}
+
+TD.TTL
+{  
+	font-family: "宋体"; 
+	font-size: 14px; 
+	color: blank;
+}
+
+Span 
+{
+	COLOR: #2A7CB1; 
+	FONT-SIZE: 12px; 
+	TEXT-DECORATION: none;
+	cursor: pointer;
+}
+
+.a 
+{
+	TEXT-DECORATION: underline
+}
+
+a 
+{
+	font-size: 12px; 
+	text-decoration: none; 
+	font-family: 宋体; 
+	color: #660099
+}
+
+A:link 
+{
+	COLOR: #003399; 
+	FONT-SIZE: 12px
+}
+
+A:visited 
+{
+	COLOR: #003399; 
+	FONT-SIZE: 12px
+}
+
+A:active 
+{
+	COLOR: #990099; 
+	FONT-SIZE: 12px
+}
+
+a:hover 
+{
+	font-size: 12px;
+	color: #5082E6;
+	font-family: 宋体;
+	text-decoration: none
+}
+
+input.but20 
+{
+	font-family: "宋体";
+	font-size: 12px;
+	border: none;
+	cursor: pointer;	
+	background-image: url(../images/button/bgbtn2_0.gif);
+	height: 20px;
+	width: 40px;
+}
+
+input.but30 
+{
+	font-family: "宋体";
+	font-size: 12px;
+	border: none;
+	cursor: pointer;	
+	background-image: url(../images/button/bgbtn3_0.gif);
+	height: 20px;
+	width: 62px
+}
+
+
+input.but40 
+{
+	font-family: "宋体";
+	font-size: 12px;
+	border: none;
+	cursor: pointer;	
+	background-image: url(../images/button/bgbtn4_0.gif);
+	height: 20px;
+	width: 62px
+}
+
+input.but50 
+{
+	font-family: "宋体";
+	font-size: 12px;
+	border: none;
+	cursor: pointer;	
+	background-image: url(../images/button/bgbtn5_0.gif);
+	height: 20px;
+	width: 85px
+}
+
+div.newPage
+{
+	width:0px; 
+	height:0px; 
+	page-break-after:always; 
+	border-bottom-style solid;
+	
+	
+	
+}
+
+TD.print
+{
+	font-family: "宋体"; 
+	font-size: 12px;
+	height:20;
+	border-left:medium none;
+	border-top:medium none;
+	border-width:1px; 
+	word-wrap: break-word; 
+	word-break: break-all;
+	padding-left:0px;
+	padding-right:0px
+}
+
+

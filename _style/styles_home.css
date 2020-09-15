@@ -1,0 +1,57 @@
+body { 
+	font-size:12px; font-family:"宋体"; background-color:#cdf2e3; color: #000000;
+	SCROLLBAR-FACE-COLOR: #f4fffb; 
+	SCROLLBAR-HIGHLIGHT-COLOR: #f4fffb;
+	SCROLLBAR-SHADOW-COLOR: #f4fffb; 
+	SCROLLBAR-3DLIGHT-COLOR: #318262;
+	SCROLLBAR-ARROW-COLOR: #318262; 
+	SCROLLBAR-TRACK-COLOR: #f4fffb;
+	SCROLLBAR-DARKSHADOW-COLOR: #318262;
+}
+
+A:link {
+	COLOR:#2A7CB1;
+	FONT-FAMILY:"宋体";
+	TEXT-DECORATION:none;
+	font-size: 12px;
+}
+
+A:visited    {COLOR:#2A7CB1;FONT-FAMILY:宋体;TEXT-DECORATION:none; }
+A:active     {FONT-FAMILY:宋体;TEXT-DECORATION:none; }
+A:hover      {COLOR:#DE9B45;TEXT-DECORATION:none; border-left-width:1; border-right-width:1; border-top-width:1}
+
+TABLE      {FONT-FAMILY:"宋体";FONT-SIZE:12px;COLOR:#000000}
+pre        {FONT-FAMILY:"宋体";FONT-SIZE:12px;COLOR:#000000}
+td         {
+	font-family: "宋体";
+	font-size: 9pt;
+	table-layout:fixed;
+	word-break :break-all;
+	color: #404275;
+}
+
+span{
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #2A7CB1;
+}
+
+SELECT	 {BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #000000 1px solid; COLOR: #000000; BORDER-BOTTOM: #000000 1px solid; BACKGROUND-COLOR: #f4f4f4
+         }
+         
+asp:textbox
+{
+	font-size: 12px; background-color: #E8E8E8;border-top-width:1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; font-family:宋体;color:#000000; 
+}       
+ 
+TEXTAREA {scrollbar-face-color: #cccccc; scrollbar-highlight-color: #f5f9ff; 
+               scrollbar-shadow-color: #828282; scrollbar-3dlight-color: 
+               #000000; scrollbar-arrow-color: #797979; 
+               scrollbar-track-color: #cccccc; scrollbar-darkshadow-color: 
+               #000000; BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 12px; BORDER-BOTTOM-WIDTH: 1px; BACKGROUND-COLOR: #f4f4f4; BORDER-RIGHT-WIDTH: 1px}
+input	{font-size: 12px; background-color: #E8E8E8;border-top-width:1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; font-family:宋体;color:#000000; }
+
+input.but20 {
+	font-family: "宋体";font-size: 12px;border: none;cursor: hand;	
+	background-image: url(../images/button/bgbtn2_0.gif);
+	height: 20px;width: 40px;}

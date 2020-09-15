@@ -1,0 +1,27 @@
+
+BODY 
+{
+ SCROLLBAR-FACE-COLOR: #f4fffb;
+}
+
+DIV 
+{   
+	SCROLLBAR-FACE-COLOR: #f4fffb; 
+	SCROLLBAR-HIGHLIGHT-COLOR: #89bfa7;
+	SCROLLBAR-SHADOW-COLOR: #bfe5d5; 
+	SCROLLBAR-3DLIGHT-COLOR: #f4fffb;
+	SCROLLBAR-ARROW-COLOR: #bfe5d5; 
+	SCROLLBAR-TRACK-COLOR: #bfe5d5;
+	SCROLLBAR-DARKSHADOW-COLOR: #f4fffb;
+}
+
+Span {COLOR: black; FONT-SIZE: 12px; TEXT-DECORATION: none}
+td { font-family:"ËÎÌו"; font-size:12px;}
+
+hr {COLOR: #89bfa7; SIZE:5px;}
+
+a {font-size: 12px; text-decoration: none; font-family: ËÎÌו; color: #660099}
+A:link {COLOR: #003399; FONT-SIZE: 12px}
+A:visited {COLOR: #003399; FONT-SIZE: 12px}
+A:active {COLOR: #990099; FONT-SIZE: 12px}
+a:hover {font-size: 12px;color: #5082E6;font-family: ËÎÌו;text-decoration: none;}
